@@ -37,7 +37,7 @@ patchesJson6902:
         value: nfs-red01
 
 resources:
-  - https://github.com/oscarsix/cryptpad-manifests?ref=v4.1.0-nginx-alpine-1
+  - github.com/oscarsix/cryptpad-manifests?ref=v4.1.0-nginx-alpine-1
 ```
 
 Deploy with `kubectl apply -k .`
