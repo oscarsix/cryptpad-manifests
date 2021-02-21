@@ -1,5 +1,5 @@
 # cryptpad-manifests
-Cryptpad server deployment based on kustomization manifests.
+[Cryptpad](https://cryptpad.fr/) server deployment based on kustomization manifests by using [promasu/cryptpad](https://hub.docker.com/r/promasu/cryptpad) docker image.
 
 ## Usage
 
