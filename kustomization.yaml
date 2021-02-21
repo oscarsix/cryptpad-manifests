@@ -1,0 +1,21 @@
+# kustomization.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+configMapGenerator:
+- name: config.js
+  files:
+    - files/config.js
+- name: cryptpad-envs
+  literals:
+    - CPAD_MAIN_DOMAIN=set.in.overlay
+    - CPAD_SANDBOX_DOMAIN=set.in.overlay
+
+generatorOptions:
+  disableNameSuffixHash: true
+
+resources:
+  - deployment-cryptpad.yaml
+  - ingress-cryptpad.yaml
+  - pvc-cryptpad-data.yaml
+  - service-cryptpad.yaml

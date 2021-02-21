@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: cryptpad
+spec:
+  rules:
+    - host: set.in.overlay
+      http:
+        paths:
+          - backend:
+              service:
+                name: cryptpad
+                port:
+                  number: 3000
+            path: /
+            pathType: Prefix
